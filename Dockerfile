@@ -1,8 +1,5 @@
-ARG SMOKE_BASE_IMAGE
+ARG SMOKE_BASE_IMAGE=benchmark/pandas-baseline:prewarm
 FROM ${SMOKE_BASE_IMAGE}
 
 WORKDIR /workspace/smoke_repo
-COPY src ./src
-COPY tests ./tests
-
-CMD ["python3", "-m", "unittest", "discover", "-s", "tests"]
+COPY . /workspace/smoke_repo
