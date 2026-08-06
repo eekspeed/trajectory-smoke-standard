@@ -1,0 +1,1 @@
+"""Smoke fixture source package."""
