@@ -12,3 +12,6 @@ class TodoTargetTest(unittest.TestCase):
 
     def test_passthrough(self):
         self.assertEqual(todo_target("already-done"), "already-done")
+
+    def test_normalizes_whitespace_and_case(self):
+        self.assertEqual(todo_target("  ToDo  "), "done")

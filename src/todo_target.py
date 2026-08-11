@@ -1,5 +1,5 @@
 def normalize_status(value):
-    return value.strip().lower()
+    return value
 
 
 def todo_target(value):
