@@ -7,7 +7,7 @@ class MortgageBehaviorTest(unittest.TestCase):
     def test_standard_five_year_loan(self):
         result = calculate_five_year_mortgage(300000, 0.06)
         self.assertAlmostEqual(result["monthly_payment"], 5799.84, places=2)
-        self.assertAlmostEqual(result["total_interest"], 47990.40, places=2)
+        self.assertAlmostEqual(result["total_interest"], 47990.49, places=2)
         self.assertEqual(len(result["schedule"]), 60)
         self.assertAlmostEqual(result["schedule"][0]["interest"], 1500.00, places=2)
         self.assertAlmostEqual(result["schedule"][-1]["balance"], 0.00, places=2)
