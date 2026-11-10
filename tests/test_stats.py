@@ -1,6 +1,6 @@
 import unittest
 
-from src.stats import mean, median
+from src.stats import mean, median, variance
 
 
 class StatsTest(unittest.TestCase):
@@ -16,3 +16,6 @@ class StatsTest(unittest.TestCase):
     def test_mean_rejects_empty_input(self):
         with self.assertRaises(ValueError):
             mean([])
+
+    def test_variance_of_population(self):
+        self.assertEqual(variance([2, 4, 4, 4, 5, 5, 7, 9]), 4)
